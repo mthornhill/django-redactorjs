@@ -17,6 +17,7 @@ INIT_JS = """<script type="text/javascript">
 
 redactor_js = [
     'redactor/redactor.min.js',
+    'redactor/toolbars/fullscreen.js'
 ]
 
 if JQUERY_URL:
