@@ -15,10 +15,12 @@ INIT_JS = """<script type="text/javascript">
     </script>
     """
 
-redactor_js = [
-    'redactor/redactor.min.js',
-    'redactor/toolbars/fullscreen.js'
-]
+redactor_js = ['redactor/redactor.min.js']
+if settings.DEBUG:
+    redactor_js = ['redactor/redactor.js']
+
+# Add the fullscreen plugin
+redactor_js.append('redactor/toolbars/fullscreen.js')
 
 if JQUERY_URL:
     redactor_js.insert(0, JQUERY_URL)
